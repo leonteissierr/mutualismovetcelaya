@@ -1,17 +1,17 @@
-export default function Galeria() {
-  const items = [
-    { emoji: '🐶', label: 'Consulta veterinaria' },
-    { emoji: '💉', label: 'Vacunación' },
-    { emoji: '✂️', label: 'Estética canina' },
-    { emoji: '🐱', label: 'Atención a gatos' },
-    { emoji: '🏥', label: 'Instalaciones' },
-    { emoji: '🔬', label: 'Cirugía' },
-    { emoji: '🐕', label: 'Paciente feliz' },
-    { emoji: '🐈', label: 'Gatito sano' },
-    { emoji: '💊', label: 'Medicamentos' },
-    { emoji: '🩺', label: 'Revisión completa' },
-  ];
+import Image from 'next/image';
 
+const items = [
+  { src: '/pacientes/paciente-1.jpeg', label: 'Bulldog Francés' },
+  { src: '/pacientes/paciente-2.jpeg', label: 'Estética canina' },
+  { src: '/pacientes/paciente-3.jpeg', label: 'Poodle feliz' },
+  { src: '/pacientes/paciente-4.jpeg', label: 'Cachorrito Shih Tzu' },
+  { src: '/pacientes/paciente-5.jpeg', label: 'Cocker Spaniel' },
+  { src: '/pacientes/paciente-6.jpeg', label: 'Schnauzer' },
+  { src: '/pacientes/paciente-7.jpeg', label: 'Yorkshire Terrier' },
+  { src: '/pacientes/paciente-8.png', label: 'Paciente feliz' },
+];
+
+export default function Galeria() {
   return (
     <section id="galeria">
       <div className="wrap">
@@ -29,9 +29,14 @@ export default function Galeria() {
             <div
               key={i}
               className={`gallery-item reveal reveal-delay-${(i % 5) + 1}`}
-              style={{ background: 'var(--sky-l)', cursor: 'default' }}
             >
-              <span style={{ fontSize: '3rem' }}>{item.emoji}</span>
+              <Image
+                src={item.src}
+                alt={item.label}
+                fill
+                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 480px) 100vw, (max-width: 920px) 50vw, 20vw"
+              />
               <div className="gallery-item-label" style={{ opacity: 1 }}>
                 {item.label}
               </div>

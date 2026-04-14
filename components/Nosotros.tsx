@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Nosotros() {
   return (
     <section id="nosotros">
@@ -5,7 +7,7 @@ export default function Nosotros() {
         <div className="agrid">
           <div>
             <div className="acard reveal from-left">
-              <span className="acard-emoji">🏥</span>
+              <Image src="/perrito-amarillo/perrito-doctor.png" alt="Doctor Mutualismo" width={140} height={140} style={{ objectFit: 'contain' }} />
               <h3>Veterinaria Mutualismo</h3>
               <p>Tu clínica de confianza en Celaya, Gto. desde hace más de 20 años.</p>
             </div>

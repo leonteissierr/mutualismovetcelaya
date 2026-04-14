@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -132,7 +133,7 @@ export default function Hero() {
             <div className="hbub b1">🏥 Consulta Hoy</div>
             <div className="hbub b2">💉 Vacunas</div>
             <div className="hbub b3">🚑 24/7</div>
-            <span style={{ fontSize: '8rem' }}>🐾</span>
+            <Image src="/perrito-amarillo/perrito-original.png" alt="Mascota Mutualismo" width={320} height={320} style={{ objectFit: 'contain' }} />
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +17,9 @@ export default function Nav() {
     <nav>
       <div className="nav-in">
         <a href="#hero" className="logo">
-          <div className="logo-ic">🐾</div>
+          <div className="logo-ic">
+            <Image src="/perrito-amarillo/perrito-estetoscopio.png" alt="Perrito Mutualismo" width={40} height={40} style={{ objectFit: 'contain' }} />
+          </div>
           <div className="logo-tx">
             Veterinaria <span>Mutualismo</span>
             <small>Celaya, Guanajuato</small>

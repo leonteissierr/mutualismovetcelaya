@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Productos() {
   return (
     <section id="productos">
@@ -47,7 +49,7 @@ export default function Productos() {
             </div>
           </div>
           <div className="pcta">
-            <span className="pcta-emoji">🛒</span>
+            <Image src="/perrito-amarillo/perrito-repartidor.png" alt="Repartidor Mutualismo" width={180} height={180} style={{ objectFit: 'contain', marginBottom: '.9rem' }} />
             <div className="stock-b">✅ Stock disponible</div>
             <h3>¡Compra con confianza!</h3>
             <p>
