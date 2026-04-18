@@ -37,7 +37,7 @@ export default function FAQ() {
         </div>
         <div className="faq-grid">
           {faqs.map((faq, i) => (
-            <div key={i} className={`faq-item reveal${open === i ? ' open' : ''}`}>
+            <div key={i} className={`faq-item${open === i ? ' open' : ''}`}>
               <div className="faq-q" onClick={() => toggle(i)}>
                 <div>
                   <div className="faq-cat">{faq.cat}</div>

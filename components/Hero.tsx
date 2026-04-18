@@ -1,16 +1,9 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [cupos, setCupos] = useState('🔴 Cupos limitados hoy');
-
-  useEffect(() => {
-    const h = new Date().getHours();
-    const c = h < 10 ? 6 : h < 13 ? 4 : h < 16 ? 3 : 2;
-    setCupos(`🔴 Solo quedan ${c} cupos disponibles hoy`);
-  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -97,18 +90,16 @@ export default function Hero() {
       />
       <div className="hero-in">
         <div>
-          <div className="hbadge reveal reveal-delay-1">🏥 Celaya, Guanajuato</div>
           <h1>
             Cuidamos a tu mascota
             <br />
             como <span className="italic-accent">familia</span> 🐾
           </h1>
-          <p className="hsub reveal reveal-delay-3">
+          <p className="hsub">
             Atención veterinaria profesional con el calor y dedicación que tu compañero merece.
             Más de 20 años cuidando mascotas en Celaya.
           </p>
-          <div className="cupos-badge" dangerouslySetInnerHTML={{ __html: cupos }} />
-          <div className="hbtns reveal reveal-delay-4">
+          <div className="hbtns">
             <a
               href="https://wa.me/524424659302?text=Hola%2C%20quiero%20agendar%20una%20cita"
               target="_blank"
@@ -121,18 +112,9 @@ export default function Hero() {
               Ver Servicios
             </a>
           </div>
-          <div className="trust reveal reveal-delay-5">
-            <div className="chip">🏆 +20 Años</div>
-            <div className="chip">⚡ Atención Inmediata</div>
-            <div className="chip">🌙 Emergencias 24/7</div>
-            <div className="chip">⭐ Recomendado</div>
-          </div>
         </div>
-        <div className="hero-img reveal from-right">
+        <div className="hero-img">
           <div className="hcircle">
-            <div className="hbub b1">🏥 Consulta Hoy</div>
-            <div className="hbub b2">💉 Vacunas</div>
-            <div className="hbub b3">🚑 24/7</div>
             <Image src="/perrito-amarillo/perrito-original.png" alt="Mascota Mutualismo" width={320} height={320} style={{ objectFit: 'contain' }} />
           </div>
         </div>

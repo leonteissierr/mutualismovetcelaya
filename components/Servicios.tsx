@@ -1,4 +1,49 @@
+'use client';
+import { useState, useRef, useEffect, useCallback } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+const services = [
+  { slug: 'bienestar',       title: 'Bienestar',       desc: 'Vacunas, checkups, spa y limpieza dental para mascotas saludables.',        img: '/logoservicios/1.png' },
+  { slug: 'diagnostico',     title: 'Diagnóstico',     desc: 'Análisis de laboratorio, Rayos X y Ultrasonidos precisos.',                 img: '/logoservicios/2.png' },
+  { slug: 'urgencias',       title: 'Urgencias',       desc: 'Atención 24/7 y hospitalización para esos momentos críticos.',              img: '/logoservicios/3.png' },
+  { slug: 'especialidades',  title: 'Especialidades',  desc: 'Ortopedia, Cardiología, Oftalmología y Oncología.',                        img: '/logoservicios/4.png' },
+  { slug: 'cirugias',        title: 'Cirugía',         desc: 'Desde esterilizaciones hasta intervenciones de tejidos y huesos.',          img: '/logoservicios/5.png' },
+  { slug: 'otros-servicios', title: 'Otros Servicios', desc: 'Certificados de viaje, etología, farmacia y microchip.',                   img: '/logoservicios/6.png' },
+];
+
+const VISIBLE = 3;
+
 export default function Servicios() {
+  const [idx, setIdx] = useState(0);
+  const viewportRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const max = services.length - VISIBLE;
+
+  const scrollTo = useCallback((i: number) => {
+    if (!viewportRef.current || !cardRef.current) return;
+    const step = cardRef.current.offsetWidth + 24; // card + 1.5rem gap
+    viewportRef.current.scrollTo({ left: i * step, behavior: 'smooth' });
+    setIdx(i);
+  }, []);
+
+  const prev = () => scrollTo(Math.max(0, idx - 1));
+  const next = () => scrollTo(Math.min(max, idx + 1));
+
+  // Keep idx in sync when the user scrolls manually (touch/mobile)
+  useEffect(() => {
+    const el = viewportRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      if (!cardRef.current) return;
+      const step = cardRef.current.offsetWidth + 24;
+      const i = Math.round(el.scrollLeft / step);
+      setIdx(Math.min(max, Math.max(0, i)));
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, [max]);
+
   return (
     <section id="servicios">
       <div className="wrap">
@@ -8,61 +53,61 @@ export default function Servicios() {
             Todo lo que tu mascota <span>necesita</span>, en un solo lugar
           </h2>
           <p className="sec-sub">
-            Servicios veterinarios completos con atención personalizada. ¡Cupos limitados — reserva hoy!
+            Servicios veterinarios completos con atención personalizada.
           </p>
         </div>
-        <div className="sgrid">
-          <div className="scard reveal reveal-delay-1">
-            <div className="sic">🩺</div>
-            <h3>Consulta Veterinaria</h3>
-            <p>Revisión completa, diagnóstico preciso y seguimiento personalizado.</p>
-          </div>
-          <div className="scard reveal reveal-delay-2">
-            <div className="sic">💉</div>
-            <h3>Vacunación</h3>
-            <p>Esquemas completos para perros y gatos con vacunas de primera calidad.</p>
-          </div>
-          <div className="scard reveal reveal-delay-3">
-            <div className="sic">✂️</div>
-            <h3>Estética Canina y Felina</h3>
-            <p>Baño, corte, limpieza de oídos, cepillado y retiro de pelaje muerto.</p>
-          </div>
-          <div className="scard reveal reveal-delay-4">
-            <div className="sic">🔬</div>
-            <h3>Cirugías</h3>
-            <p>Desde esterilizaciones hasta procedimientos complejos con máxima seguridad.</p>
-          </div>
-          <div className="scard reveal reveal-delay-5">
-            <div className="sic">🏥</div>
-            <h3>Hospitalización</h3>
-            <p>Cuidado intensivo y monitoreo constante hasta la total recuperación.</p>
-          </div>
-          <div className="scard reveal reveal-delay-5">
-            <div className="sic">🚨</div>
-            <h3>Emergencias 24/7</h3>
-            <p>Disponibles todos los días a cualquier hora. Atención inmediata sin excepciones.</p>
-            <div className="tag-urg">🔴 Disponible siempre</div>
-          </div>
-          <div className="scard reveal reveal-delay-5">
-            <div className="sic">🏨</div>
-            <h3>Pensión — Hotel para Mascotas</h3>
-            <p>
-              Tu perro o gato en buenas manos mientras no estás. Cuidado personalizado y atención
-              constante las 24 horas. El dueño provee el alimento — nosotros ponemos el cariño y la
-              seguridad.
-            </p>
-            <div className="tag-info">🐶 Perros &nbsp;·&nbsp; 🐱 Gatos &nbsp;·&nbsp; 💰 Precio según tamaño</div>
-          </div>
-        </div>
-        <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-          <a
-            href="https://wa.me/524424659302?text=Hola%2C%20quiero%20agendar%20una%20consulta"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-sky"
+
+        <div className="carousel-outer">
+          <button
+            className="carousel-arrow carousel-prev"
+            onClick={prev}
+            disabled={idx === 0}
+            aria-label="Anterior"
           >
-            📲 Agendar Cita — ¡Cupos Limitados!
-          </a>
+            ‹
+          </button>
+
+          <div className="carousel-viewport" ref={viewportRef}>
+            <div className="carousel-track">
+              {services.map((s, i) => (
+                <div
+                  key={s.slug}
+                  className="carousel-card"
+                  ref={i === 0 ? cardRef : undefined}
+                >
+                  <div className="carousel-icon">
+                    <Image src={s.img} alt={s.title} width={64} height={64} style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
+                  </div>
+                  <h3 className="carousel-title">{s.title}</h3>
+                  <p className="carousel-desc">{s.desc}</p>
+                  <Link href={`/servicios/${s.slug}`} className="carousel-link">
+                    Ver más →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <button
+            className="carousel-arrow carousel-next"
+            onClick={next}
+            disabled={idx === max}
+            aria-label="Siguiente"
+          >
+            ›
+          </button>
+        </div>
+
+        {/* Dots */}
+        <div className="carousel-dots">
+          {Array.from({ length: max + 1 }).map((_, i) => (
+            <button
+              key={i}
+              className={`carousel-dot${i === idx ? ' active' : ''}`}
+              onClick={() => scrollTo(i)}
+              aria-label={`Ir a ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>

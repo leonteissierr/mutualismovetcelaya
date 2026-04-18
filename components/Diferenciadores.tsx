@@ -1,34 +1,45 @@
 export default function Diferenciadores() {
   const items = [
-    { icon: '🤝', title: 'Atención Personalizada', desc: 'Recordamos a tus pacientes y sus necesidades particulares.' },
-    { icon: '💻', title: 'Tecnología Moderna', desc: 'Equipos de diagnóstico actualizados para que nada se pase por alto.' },
-    { icon: '📋', title: 'Seguimiento de Pacientes', desc: 'Registramos el historial médico y te recordamos vacunas y revisiones.' },
-    { icon: '🚑', title: 'Emergencias Inmediatas', desc: 'Disponibles 24 horas, 7 días a la semana. En los momentos difíciles, ahí estamos.' },
-    { icon: '❤️', title: 'Amor Real por los Animales', desc: 'No es solo trabajo — es vocación. Tratamos a cada paciente con ternura.' },
-    { icon: '💰', title: 'Precios Transparentes', desc: 'Sin sorpresas. Te explicamos costos antes del tratamiento.' },
+    { num: '01', title: 'Atención Personalizada',    desc: 'Recordamos a cada paciente y sus necesidades. No eres un número — eres parte de nuestra comunidad.' },
+    { num: '02', title: 'Tecnología de Diagnóstico', desc: 'Equipos actualizados de laboratorio, rayos X y ultrasonido para que nada pase desapercibido.' },
+    { num: '03', title: 'Seguimiento Continuo',      desc: 'Registramos el historial médico completo y te avisamos sobre vacunas, revisiones y tratamientos.' },
+    { num: '04', title: 'Urgencias 24 Horas',        desc: 'Disponibles todos los días del año. Cuando más nos necesitas, ahí estaremos.' },
+    { num: '05', title: 'Vocación por los Animales', desc: 'No es solo trabajo — es pasión. Cada paciente recibe el mismo cuidado que daríamos a los nuestros.' },
+    { num: '06', title: 'Precios Transparentes',     desc: 'Sin sorpresas en la cuenta. Te explicamos costos y opciones antes de cualquier procedimiento.' },
   ];
 
   return (
     <section id="diferenciadores">
       <div className="wrap">
-        <div className="sec-hdr" style={{ textAlign: 'center' }}>
-          <span className="sec-lbl">¿Por qué elegirnos?</span>
-          <h2 className="sec-h">
-            Lo que nos hace <span>diferentes</span>
-          </h2>
-          <p className="sec-sub" style={{ margin: '0 auto' }}>
-            No buscamos ser la clínica más grande. Buscamos ser la más confiable.
+
+        <div className="df-top reveal slide-up">
+          <div>
+            <span className="sec-lbl">¿Por qué elegirnos?</span>
+            <h2 className="df-heading">
+              Lo que nos hace<br />
+              <em>diferentes</em>
+            </h2>
+          </div>
+          <p className="df-sub">
+            No buscamos ser la clínica más grande.<br />
+            Buscamos ser la más confiable.
           </p>
         </div>
-        <div className="dgrid">
+
+        <div className="df-list">
           {items.map((item, i) => (
-            <div key={i} className={`dcard reveal reveal-delay-${i + 1}`}>
-              <div className="dic">{item.icon}</div>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+            <div
+              key={i}
+              className="df-row reveal slide-up"
+              style={{ transitionDelay: `${i * 0.06}s` }}
+            >
+              <span className="df-num">{item.num}</span>
+              <h3 className="df-title">{item.title}</h3>
+              <p className="df-desc">{item.desc}</p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

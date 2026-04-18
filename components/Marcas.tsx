@@ -1,19 +1,24 @@
+import Image from 'next/image';
+
 export default function Marcas() {
   const brands = [
     {
+      logo: '/marca_alimentos/nupec.png',
       name: 'NUPEC',
       desc: 'Nutrición especializada con proteínas de alta calidad para cada raza y etapa de vida.',
-      tags: ['🐶 Perros', '🐱 Gatos', '⭐ Premium'],
+      tags: ['Perros', 'Gatos', 'Premium'],
     },
     {
+      logo: '/marca_alimentos/royal-canin.webp',
       name: 'Royal Canin',
       desc: 'Fórmulas científicas adaptadas a la raza, edad y condición de salud específica de tu mascota.',
-      tags: ['🧬 Por raza', '👶 Etapas', '🏆 Top marca'],
+      tags: ['Por raza', 'Etapas', 'Top marca'],
     },
     {
+      logo: '/marca_alimentos/hills.png',
       name: "Hill's Science Diet",
       desc: 'Respaldado por veterinarios con ingredientes naturales y ciencia nutricional de primer nivel.',
-      tags: ['🔬 Científico', '🌿 Natural', '✅ Vet recommended'],
+      tags: ['Científico', 'Natural', 'Vet recommended'],
     },
   ];
 
@@ -33,6 +38,15 @@ export default function Marcas() {
         <div className="brands-bar">
           {brands.map((b, i) => (
             <div key={i} className={`brand-logo-card reveal reveal-delay-${i + 1}`}>
+              <div style={{ width: '100%', height: '100px', position: 'relative' }}>
+                <Image
+                  src={b.logo}
+                  alt={b.name}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  sizes="280px"
+                />
+              </div>
               <div className="brand-card-body">
                 <div className="brand-card-name">{b.name}</div>
                 <div className="brand-card-desc">{b.desc}</div>
@@ -52,7 +66,7 @@ export default function Marcas() {
             rel="noopener noreferrer"
             className="btn btn-sky"
           >
-            🛒 Pedir asesoría de alimento
+            Pedir asesoría de alimento
           </a>
         </div>
       </div>

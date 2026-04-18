@@ -1,22 +1,18 @@
 export default function Pension() {
   const features = [
     {
-      emoji: '🐶',
       title: 'Perros y gatos',
       desc: 'Aceptamos ambas especies con cuidado personalizado para cada una.',
     },
     {
-      emoji: '🍽️',
       title: 'El dueño provee el alimento',
       desc: 'Para mantener la dieta habitual de tu mascota y evitar cambios bruscos.',
     },
     {
-      emoji: '💰',
       title: 'Precio según tamaño',
       desc: 'Tarifa personalizada dependiendo del tamaño de tu mascota. Consulta disponibilidad.',
     },
     {
-      emoji: '🩺',
       title: 'Atención veterinaria disponible',
       desc: 'Nuestro equipo está siempre presente para cualquier situación que surja.',
     },
@@ -39,7 +35,7 @@ export default function Pension() {
           <div className="reveal from-left">
             <span className="sec-lbl">Nuevo servicio</span>
             <h2 className="sec-h">
-              Pensión — <span>Hotel para mascotas</span> 🏨
+              Pensión — <span>Hotel para mascotas</span>
             </h2>
             <p style={{ color: 'var(--text2)', fontSize: '.95rem', lineHeight: 1.7, marginBottom: '1.2rem' }}>
               Tu perro o gato en las mejores manos mientras no estás. Cuidado profesional,
@@ -58,7 +54,6 @@ export default function Pension() {
                     padding: '1rem 1.2rem',
                   }}
                 >
-                  <span style={{ fontSize: '1.4rem' }}>{f.emoji}</span>
                   <div>
                     <strong style={{ color: 'var(--text)', fontSize: '.92rem' }}>{f.title}</strong>
                     <p style={{ color: 'var(--text2)', fontSize: '.85rem', marginTop: '2px' }}>{f.desc}</p>
@@ -72,7 +67,7 @@ export default function Pension() {
               rel="noopener noreferrer"
               className="btn btn-sky"
             >
-              🏨 Consultar disponibilidad
+              Consultar disponibilidad
             </a>
           </div>
           <div className="reveal from-right">
@@ -85,7 +80,6 @@ export default function Pension() {
                 color: '#fff',
               }}
             >
-              <div style={{ fontSize: '5rem', marginBottom: '1rem' }}>🏨</div>
               <h3 style={{ fontFamily: 'Fraunces,serif', fontSize: '1.4rem', fontWeight: 900, marginBottom: '.5rem' }}>
                 Hotel para Mascotas
               </h3>
@@ -103,7 +97,7 @@ export default function Pension() {
                 <div style={{ fontSize: '.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.5px', opacity: 0.7, marginBottom: '.3rem' }}>
                   Incluye
                 </div>
-                {['🛏️ Espacio cómodo', '💧 Agua fresca siempre', '🎾 Tiempo de juego', '🩺 Supervisión veterinaria'].map((item) => (
+                {['Espacio cómodo', 'Agua fresca siempre', 'Tiempo de juego', 'Supervisión veterinaria'].map((item) => (
                   <div key={item} style={{ fontSize: '.88rem', fontWeight: 600, padding: '.25rem 0' }}>
                     {item}
                   </div>
@@ -116,7 +110,7 @@ export default function Pension() {
                 className="btn btn-wh"
                 style={{ width: '100%' }}
               >
-                📲 Reservar ahora
+                Reservar ahora
               </a>
             </div>
           </div>
