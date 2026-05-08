@@ -7,44 +7,41 @@ import ScrollEffects from '@/components/ScrollEffects';
 
 export const metadata: Metadata = {
   title: 'Otros Servicios | Veterinaria Mutualismo — Celaya',
-  description:
-    'Certificados de viaje, etología, farmacia veterinaria y microchip en Celaya, Guanajuato.',
+  description: 'Microchip, certificados de viaje, etología y farmacia veterinaria en Celaya, Guanajuato.',
 };
 
 const sections = [
   {
     title: 'Certificados de Viaje',
-    desc: 'Certificado de salud oficial para viajes nacionales e internacionales. Te asesoramos sobre los requisitos específicos de cada país para que el viaje con tu mascota sea seguro y sin contratiempos.',
+    desc: '¿Tu mascota te acompaña en un viaje? Te asesoramos sobre los requisitos sanitarios nacionales e internacionales y expedimos el certificado de salud oficial. Nos aseguramos de que el proceso sea sencillo y que tu compañero llegue sin contratiempos.',
     illustration: '/servicios/vacunaaa.png',
     photo: '/pacientes/paciente-1.jpeg',
-    photoAlt: 'Mascota lista para viajar Veterinaria Mutualismo',
-    bg: '#ffffff',
+    photoAlt: 'Mascota lista para viajar Veterinaria Mutualismo Celaya',
   },
   {
-    title: 'Etología',
-    desc: 'Evaluación y tratamiento de problemas de conducta como agresividad, ansiedad, miedos y comportamientos destructivos. Trabajamos con planes personalizados para mejorar la convivencia con tu mascota.',
+    title: 'Consultoría en Comportamiento',
+    desc: 'Agresividad, ansiedad de separación, miedos y comportamientos destructivos tienen solución. Evaluamos a tu mascota y diseñamos un plan de manejo adaptado a su personalidad, historial y entorno familiar para mejorar la convivencia.',
     illustration: '/servicios/consuulta.png',
     photo: '/pacientes/paciente-2.jpeg',
-    photoAlt: 'Consulta de etología Veterinaria Mutualismo',
-    bg: '#f7fbfe',
+    photoAlt: 'Consulta de comportamiento Veterinaria Mutualismo Celaya',
   },
   {
     title: 'Farmacia Veterinaria',
-    desc: 'Amplio surtido de medicamentos, antiparasitarios, vitaminas y suplementos para tu mascota. Contamos con productos de las mejores marcas y asesoría farmacológica personalizada.',
+    desc: 'Amplio surtido de medicamentos, antiparasitarios, vitaminas y suplementos de marcas confiables. Te asesoramos sobre el uso correcto de cada producto y vendemos solo lo que tu mascota realmente necesita, siempre con orientación profesional.',
     illustration: '/servicios/profilaxiss.png',
     photo: '/pacientes/paciente-4.jpeg',
-    photoAlt: 'Farmacia veterinaria Mutualismo',
-    bg: '#ffffff',
+    photoAlt: 'Farmacia Veterinaria Mutualismo Celaya',
   },
   {
-    title: 'Microchip',
-    desc: 'Identificación permanente y segura con chip electrónico compatible con el registro nacional. Un procedimiento rápido e indoloro que garantiza que tu mascota siempre pueda ser identificada si se pierde.',
+    title: 'Identificación con Microchip',
+    desc: 'Un microchip del tamaño de un grano de arroz puede ser la diferencia entre reencontrarte con tu mascota o no. La colocación es rápida, prácticamente indolora y deja un registro permanente compatible con los sistemas de identificación en México.',
     illustration: '/servicios/esteticaa.png',
     photo: '/pacientes/paciente-5.jpeg',
-    photoAlt: 'Colocación de microchip Veterinaria Mutualismo',
-    bg: '#f7fbfe',
+    photoAlt: 'Colocación de microchip Veterinaria Mutualismo Celaya',
   },
 ];
+
+const WA = 'https://wa.me/524424659302?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20otros%20servicios';
 
 export default function OtrosServiciosPage() {
   return (
@@ -52,64 +49,59 @@ export default function OtrosServiciosPage() {
       <Nav />
       <ScrollEffects />
 
-      {/* Hero */}
-      <section className="svc-hero">
-        <div className="wrap" style={{ textAlign: 'center' }}>
-          <p className="svc-breadcrumb reveal slide-up">
-            <Link href="/#servicios">Servicios</Link> / <span>Otros Servicios</span>
-          </p>
-          <h1 className="reveal slide-up" style={{ transitionDelay: '.1s' }}>Otros Servicios</h1>
-          <p className="reveal slide-up" style={{ transitionDelay: '.2s' }}>
-            Servicios complementarios para el bienestar integral de tu mascota y para facilitar tu vida como dueño responsable.
-          </p>
-          <a
-            href="https://wa.me/524424659302?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20otros%20servicios"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-sky reveal slide-up"
-            style={{ transitionDelay: '.3s' }}
-          >
-            Agenda una cita
-          </a>
+      <section className="svc-hero-v2">
+        <div className="wrap">
+          <div className="svc-hero-v2-inner">
+            <div className="svc-hero-v2-content">
+              <span className="svc-breadcrumb">
+                <Link href="/#servicios">Servicios</Link> / <span>Otros Servicios</span>
+              </span>
+              <h1>Otros Servicios</h1>
+              <p>
+                Más allá de la consulta y la cirugía, tenemos todo lo que necesitas
+                como dueño responsable: microchip, certificados de viaje, consultoría
+                en comportamiento y farmacia veterinaria, todo en un solo lugar.
+              </p>
+              <a href={WA} target="_blank" rel="noopener noreferrer" className="btn btn-wh">
+                Pregúntanos
+              </a>
+            </div>
+            <div className="svc-hero-v2-icon">
+              <Image src="/logoservicios/6.png" alt="Otros Servicios" width={110} height={110} style={{ objectFit: 'contain', width: '100%', height: 'auto' }} />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Feature sections */}
-      {sections.map((s) => (
-        <div key={s.title} className="bw-section" style={{ background: s.bg }}>
-          <div className="bw-content reveal slide-left">
-            <div className="bw-illustration">
-              <Image
-                src={s.illustration}
-                alt={s.title}
-                width={700}
-                height={520}
-                style={{ width: '52%', height: 'auto' }}
-              />
-            </div>
-            <h2 className="bw-title">{s.title}</h2>
-            <p className="bw-desc">{s.desc}</p>
-            <a
-              href="https://wa.me/524424659302?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20otros%20servicios"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-sky"
-              style={{ width: 'fit-content' }}
-            >
-              Agenda tu cita
-            </a>
-          </div>
-          <div className="bw-photo reveal slide-right">
-            <Image
-              src={s.photo}
-              alt={s.photoAlt}
-              fill
-              style={{ objectFit: 'cover', objectPosition: 'center top' }}
-              sizes="50vw"
-            />
+      <section className="svc-features">
+        <div className="wrap">
+          <div className="svc-feat-grid">
+            {sections.map((s) => (
+              <div key={s.title} className="svc-feat reveal slide-up">
+                <div className="svc-feat-photo">
+                  <Image src={s.photo} alt={s.photoAlt} fill style={{ objectFit: 'cover', objectPosition: 'center top' }} sizes="(max-width:768px) 100vw, 50vw" />
+                </div>
+                <div className="svc-feat-body">
+                  <div className="svc-feat-illus">
+                    <Image src={s.illustration} alt={s.title} width={70} height={70} style={{ objectFit: 'contain', width: '100%', height: 'auto' }} />
+                  </div>
+                  <div className="svc-feat-text">
+                    <h2>{s.title}</h2>
+                    <p>{s.desc}</p>
+                    <a href={WA} target="_blank" rel="noopener noreferrer" className="svc-feat-cta">Más información →</a>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
+      </section>
+
+      <div className="svc-strip-cta">
+        <h2>¿Tienes alguna duda?</h2>
+        <p>Escríbenos y con gusto te orientamos. En Mutualismo siempre hay alguien dispuesto a ayudarte.</p>
+        <a href={WA} target="_blank" rel="noopener noreferrer" className="btn btn-wh">Contactar ahora</a>
+      </div>
 
       <Footer />
     </>

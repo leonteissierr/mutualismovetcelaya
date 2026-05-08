@@ -91,6 +91,41 @@ export default function NosotrosPage() {
         </div>
       </section>
 
+      {/* Antes y Después */}
+      <section style={{ padding: '5rem 0', background: '#f7fbfe' }}>
+        <div className="wrap">
+          <div className="sec-hdr reveal slide-up" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <span className="sec-lbl">Nuestra clínica</span>
+            <h2 className="sec-h">Antes y <span>después</span></h2>
+            <p className="sec-sub" style={{ margin: '0 auto' }}>
+              Así hemos crecido para darte la mejor atención.
+            </p>
+          </div>
+          <div className="antes-despues-grid">
+            <div className="ad-card reveal slide-left">
+              <div className="ad-label antes">Antes</div>
+              <Image
+                src="/veterinaria antes despues/antes.png"
+                alt="Clínica Veterinaria Mutualismo — antes"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                sizes="50vw"
+              />
+            </div>
+            <div className="ad-card reveal slide-right">
+              <div className="ad-label despues">Después</div>
+              <Image
+                src="/veterinaria antes despues/despues.png"
+                alt="Clínica Veterinaria Mutualismo — después"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                sizes="50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );

@@ -18,7 +18,7 @@ export default function Galeria() {
         <div className="sec-hdr" style={{ textAlign: 'center' }}>
           <span className="sec-lbl">Galería</span>
           <h2 className="sec-h">
-            Nuestros pacientes <span>felices</span> 🐾
+            Nuestros pacientes <span>felices</span>
           </h2>
           <p className="sec-sub" style={{ margin: '0 auto' }}>
             Cada mascota que pasa por nuestras manos es tratada con amor y profesionalismo.

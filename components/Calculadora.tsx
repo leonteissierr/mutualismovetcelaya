@@ -25,11 +25,11 @@ function calcDog(ageYears: number, size: DogSize): CalcResult {
   const barPct = Math.min(100, Math.round((ageYears / maxLife) * 100));
   let stage: string, stageIcon: string, detail: string, nextCheckup: string;
 
-  if (humanAge < 15) { stage = 'Cachorro 🍼'; stageIcon = '🍼'; detail = 'Etapa de máximo crecimiento. Necesita vacunas iniciales, desparasitación y socialización. ¡Visítanos pronto!'; }
-  else if (humanAge < 30) { stage = 'Joven'; stageIcon = '⚡'; detail = 'Lleno de energía. Mantén al día sus vacunas anuales y desparasitaciones cada 3 meses.'; }
-  else if (humanAge < 50) { stage = 'Adulto'; stageIcon = '💪'; detail = 'Etapa estable. Revisión anual recomendada para mantenerlo en óptima condición.'; }
-  else if (humanAge < 65) { stage = 'Maduro'; stageIcon = '🎯'; detail = 'Conviene revisarlo cada 6 meses. Vigila articulaciones, peso y salud dental.'; }
-  else { stage = 'Senior'; stageIcon = '👴'; detail = 'Merece cuidados especiales. Revisión cada 3–6 meses para detectar cambios a tiempo.'; }
+  if (humanAge < 15) { stage = 'Cachorro'; stageIcon = ''; detail = 'Etapa de máximo crecimiento. Necesita vacunas iniciales, desparasitación y socialización. ¡Visítanos pronto!'; }
+  else if (humanAge < 30) { stage = 'Joven'; stageIcon = ''; detail = 'Lleno de energía. Mantén al día sus vacunas anuales y desparasitaciones cada 3 meses.'; }
+  else if (humanAge < 50) { stage = 'Adulto'; stageIcon = ''; detail = 'Etapa estable. Revisión anual recomendada para mantenerlo en óptima condición.'; }
+  else if (humanAge < 65) { stage = 'Maduro'; stageIcon = ''; detail = 'Conviene revisarlo cada 6 meses. Vigila articulaciones, peso y salud dental.'; }
+  else { stage = 'Senior'; stageIcon = ''; detail = 'Merece cuidados especiales. Revisión cada 3–6 meses para detectar cambios a tiempo.'; }
 
   if (humanAge < 30) nextCheckup = 'Cada 3 meses';
   else if (humanAge < 50) nextCheckup = 'Cada año';
@@ -48,11 +48,11 @@ function calcCat(ageYears: number): CalcResult {
   const barPct = Math.min(100, Math.round((ageYears / 18) * 100));
   let stage: string, stageIcon: string, detail: string, nextCheckup: string;
 
-  if (humanAge < 15) { stage = 'Gatito 🍼'; stageIcon = '🍼'; detail = 'Crecimiento activo. Vacunas esenciales y desparasitación. Primera visita al veterinario.'; }
-  else if (humanAge < 30) { stage = 'Joven'; stageIcon = '⚡'; detail = 'Energético e independiente. Esterilización recomendada si aún no se ha realizado.'; }
-  else if (humanAge < 50) { stage = 'Adulto'; stageIcon = '💪'; detail = 'Periodo estable. Revisión anual y vacunas al día es todo lo que necesita.'; }
-  else if (humanAge < 65) { stage = 'Maduro'; stageIcon = '🎯'; detail = 'Revisión cada 6 meses. Presta atención a riñones, articulaciones y peso.'; }
-  else { stage = 'Senior'; stageIcon = '👴'; detail = 'Necesita atención especial. Visitas frecuentes para detectar cambios a tiempo.'; }
+  if (humanAge < 15) { stage = 'Gatito'; stageIcon = ''; detail = 'Crecimiento activo. Vacunas esenciales y desparasitación. Primera visita al veterinario.'; }
+  else if (humanAge < 30) { stage = 'Joven'; stageIcon = ''; detail = 'Energético e independiente. Esterilización recomendada si aún no se ha realizado.'; }
+  else if (humanAge < 50) { stage = 'Adulto'; stageIcon = ''; detail = 'Periodo estable. Revisión anual y vacunas al día es todo lo que necesita.'; }
+  else if (humanAge < 65) { stage = 'Maduro'; stageIcon = ''; detail = 'Revisión cada 6 meses. Presta atención a riñones, articulaciones y peso.'; }
+  else { stage = 'Senior'; stageIcon = ''; detail = 'Necesita atención especial. Visitas frecuentes para detectar cambios a tiempo.'; }
 
   if (humanAge < 30) nextCheckup = 'Cada 3 meses';
   else if (humanAge < 50) nextCheckup = 'Cada año';
@@ -88,7 +88,7 @@ export default function Calculadora() {
           <h2 className="sec-h">
             ¿Cuántos años tiene tu mascota
             <br />
-            en años <span>humanos</span>? 🐾
+            en años <span>humanos</span>?
           </h2>
           <p className="sec-sub" style={{ margin: '0 auto' }}>
             Descubre la etapa de vida de tu mascota y qué cuidados necesita ahora.
@@ -103,13 +103,13 @@ export default function Calculadora() {
                   className={`calc-type-btn${petType === 'perro' ? ' active' : ''}`}
                   onClick={() => setPetType('perro')}
                 >
-                  🐶 Perro
+                  Perro
                 </button>
                 <button
                   className={`calc-type-btn${petType === 'gato' ? ' active' : ''}`}
                   onClick={() => setPetType('gato')}
                 >
-                  🐱 Gato
+                  Gato
                 </button>
               </div>
             </div>
@@ -146,7 +146,7 @@ export default function Calculadora() {
           <div className="calc-result reveal from-right">
             {result ? (
               <>
-                <div className="calc-life-stage">{result.stageIcon} {result.stage}</div>
+                <div className="calc-life-stage">{result.stage}</div>
                 <div className="calc-age-human">{result.humanAge}</div>
                 <div className="calc-age-label">años humanos equivalentes</div>
                 <div className="age-bar-wrap">
@@ -154,7 +154,7 @@ export default function Calculadora() {
                 </div>
                 <div className="calc-detail">{result.detail}</div>
                 <div style={{ marginTop: '.8rem', background: 'var(--sky-p)', borderRadius: '10px', padding: '.5rem .9rem', fontSize: '.78rem', fontWeight: 700, color: 'var(--sky-d)' }}>
-                  📅 Próxima revisión: {result.nextCheckup}
+                  Próxima revisión: {result.nextCheckup}
                 </div>
                 <div className="calc-cta">
                   ¿Necesitas cita? <a href="#agenda">Agéndala aquí</a>
@@ -162,7 +162,6 @@ export default function Calculadora() {
               </>
             ) : (
               <div className="calc-result-empty">
-                <span className="big-paw">🐾</span>
                 <strong style={{ display: 'block', marginBottom: '.4rem', color: 'var(--text)' }}>
                   Ingresa la edad de tu mascota
                 </strong>

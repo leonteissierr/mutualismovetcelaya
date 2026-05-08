@@ -6,29 +6,28 @@ import Footer from '@/components/Footer';
 import ScrollEffects from '@/components/ScrollEffects';
 
 export const metadata: Metadata = {
-  title: 'Urgencias | Veterinaria Mutualismo — Celaya',
-  description:
-    'Atención de emergencia 24 horas y hospitalización intensiva para tu mascota en Celaya, Guanajuato.',
+  title: 'Urgencias 24/7 | Veterinaria Mutualismo — Celaya',
+  description: 'Atención veterinaria de emergencia disponible las 24 horas del día en Celaya, Guanajuato.',
 };
 
 const sections = [
   {
-    title: 'Atención Inmediata 24h',
-    desc: 'Equipo médico disponible en todo momento para emergencias críticas. Sin cita, sin esperas innecesarias. Tu mascota recibirá atención de urgencia de forma inmediata los 365 días del año.',
+    title: 'Atención a Cualquier Hora',
+    desc: 'En una emergencia, cada minuto cuenta. Nuestro equipo está disponible las 24 horas del día, los 7 días de la semana, incluyendo fines de semana y días festivos. Contáctanos por teléfono o WhatsApp y te orientamos de inmediato sobre los pasos a seguir.',
     illustration: '/servicios/urgencias24hrs.png',
     photo: '/pacientes/paciente-3.jpeg',
-    photoAlt: 'Paciente en urgencias Veterinaria Mutualismo',
-    bg: '#ffffff',
+    photoAlt: 'Mascota siendo atendida en urgencias Veterinaria Mutualismo',
   },
   {
-    title: 'Hospitalización Intensiva',
-    desc: 'Unidad de cuidados intensivos con monitoreo constante de signos vitales y atención especializada. Nuestro equipo vigila a tu mascota durante todo su proceso de recuperación.',
+    title: 'Hospitalización y Seguimiento',
+    desc: 'Cuando tu mascota necesita monitoreo constante, contamos con área de hospitalización donde recibe revisiones periódicas, medicación controlada y atención cercana. Nuestro objetivo es siempre que regrese a casa en las mejores condiciones posibles.',
     illustration: '/servicios/hospitalizacion.png',
     photo: '/pacientes/paciente-6.jpeg',
-    photoAlt: 'Perro hospitalizado en Veterinaria Mutualismo',
-    bg: '#f7fbfe',
+    photoAlt: 'Perro en recuperación Veterinaria Mutualismo Celaya',
   },
 ];
+
+const WA = 'https://wa.me/524424659302?text=Hola%2C%20tengo%20una%20urgencia%20con%20mi%20mascota';
 
 export default function UrgenciasPage() {
   return (
@@ -36,64 +35,59 @@ export default function UrgenciasPage() {
       <Nav />
       <ScrollEffects />
 
-      {/* Hero */}
-      <section className="svc-hero">
-        <div className="wrap" style={{ textAlign: 'center' }}>
-          <p className="svc-breadcrumb reveal slide-up">
-            <Link href="/#servicios">Servicios</Link> / <span>Urgencias</span>
-          </p>
-          <h1 className="reveal slide-up" style={{ transitionDelay: '.1s' }}>Urgencias</h1>
-          <p className="reveal slide-up" style={{ transitionDelay: '.2s' }}>
-            Disponibles las 24 horas del día, los 365 días del año. Tu mascota nunca estará sola en una emergencia.
-          </p>
-          <a
-            href="https://wa.me/524424659302?text=Hola%2C%20tengo%20una%20urgencia%20con%20mi%20mascota"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-sky reveal slide-up"
-            style={{ transitionDelay: '.3s' }}
-          >
-            Contactar ahora
-          </a>
+      <section className="svc-hero-v2">
+        <div className="wrap">
+          <div className="svc-hero-v2-inner">
+            <div className="svc-hero-v2-content">
+              <span className="svc-breadcrumb">
+                <Link href="/#servicios">Servicios</Link> / <span>Urgencias 24/7</span>
+              </span>
+              <h1>Urgencias 24/7</h1>
+              <p>
+                Las emergencias no avisan. Por eso estamos disponibles toda la noche,
+                todos los días del año. Llámanos o escríbenos: siempre habrá alguien
+                listo para ayudarte.
+              </p>
+              <a href={WA} target="_blank" rel="noopener noreferrer" className="btn btn-wh">
+                Contactar ahora
+              </a>
+            </div>
+            <div className="svc-hero-v2-icon">
+              <Image src="/logoservicios/3.png" alt="Urgencias" width={110} height={110} style={{ objectFit: 'contain', width: '100%', height: 'auto' }} />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Feature sections */}
-      {sections.map((s) => (
-        <div key={s.title} className="bw-section" style={{ background: s.bg }}>
-          <div className="bw-content reveal slide-left">
-            <div className="bw-illustration">
-              <Image
-                src={s.illustration}
-                alt={s.title}
-                width={700}
-                height={520}
-                style={{ width: '52%', height: 'auto' }}
-              />
-            </div>
-            <h2 className="bw-title">{s.title}</h2>
-            <p className="bw-desc">{s.desc}</p>
-            <a
-              href="https://wa.me/524424659302?text=Hola%2C%20tengo%20una%20urgencia%20con%20mi%20mascota"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-sky"
-              style={{ width: 'fit-content' }}
-            >
-              Contactar ahora
-            </a>
-          </div>
-          <div className="bw-photo reveal slide-right">
-            <Image
-              src={s.photo}
-              alt={s.photoAlt}
-              fill
-              style={{ objectFit: 'cover', objectPosition: 'center top' }}
-              sizes="50vw"
-            />
+      <section className="svc-features">
+        <div className="wrap">
+          <div className="svc-feat-grid">
+            {sections.map((s) => (
+              <div key={s.title} className="svc-feat reveal slide-up">
+                <div className="svc-feat-photo">
+                  <Image src={s.photo} alt={s.photoAlt} fill style={{ objectFit: 'cover', objectPosition: 'center top' }} sizes="(max-width:768px) 100vw, 50vw" />
+                </div>
+                <div className="svc-feat-body">
+                  <div className="svc-feat-illus">
+                    <Image src={s.illustration} alt={s.title} width={70} height={70} style={{ objectFit: 'contain', width: '100%', height: 'auto' }} />
+                  </div>
+                  <div className="svc-feat-text">
+                    <h2>{s.title}</h2>
+                    <p>{s.desc}</p>
+                    <a href={WA} target="_blank" rel="noopener noreferrer" className="svc-feat-cta">Contactar ahora →</a>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
+      </section>
+
+      <div className="svc-strip-cta">
+        <h2>¿Es una emergencia ahora mismo?</h2>
+        <p>No esperes. Escríbenos por WhatsApp o llámanos directamente. Estamos disponibles en este momento.</p>
+        <a href={WA} target="_blank" rel="noopener noreferrer" className="btn btn-wh">Contactar de inmediato</a>
+      </div>
 
       <Footer />
     </>

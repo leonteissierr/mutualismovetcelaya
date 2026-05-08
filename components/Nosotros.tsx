@@ -64,7 +64,7 @@ export default function Nosotros() {
               className="btn btn-sky"
               style={{ marginTop: '1.5rem' }}
             >
-              💬 Contáctanos Ahora
+              Contáctanos Ahora
             </a>
           </div>
         </div>

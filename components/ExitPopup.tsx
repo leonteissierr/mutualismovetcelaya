@@ -20,7 +20,7 @@ export default function ExitPopup() {
         >
           ✕
         </button>
-        <span style={{ fontSize: '3rem', display: 'block', marginBottom: '.8rem' }}>🐾</span>
+        <div style={{ height: '.8rem' }} />
         <h3 style={{ fontFamily: 'Fraunces,serif', fontSize: '1.6rem', fontWeight: 900, color: 'var(--text)', marginBottom: '.5rem', lineHeight: 1.2 }}>
           ¡Espera un momento!
         </h3>
@@ -29,7 +29,7 @@ export default function ExitPopup() {
         </p>
         <div style={{ background: 'linear-gradient(135deg,var(--sky-p),var(--sky-l))', border: '2px solid var(--sky-l)', borderRadius: '16px', padding: '1rem 1.2rem', marginBottom: '1.5rem' }}>
           <div style={{ fontSize: '.72rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '.8px', color: 'var(--sky-d)', marginBottom: '.3rem' }}>
-            🎁 Exclusivo para nuevos pacientes
+            Exclusivo para nuevos pacientes
           </div>
           <div style={{ fontFamily: 'Fraunces,serif', fontSize: '1.1rem', fontWeight: 900, color: 'var(--text)' }}>
             Primera consulta + asesoría de alimento gratis
@@ -43,7 +43,7 @@ export default function ExitPopup() {
             onClick={close}
             style={{ background: 'var(--green)', color: '#fff', padding: '.9rem 1.5rem', borderRadius: '25px', fontFamily: 'DM Sans,sans-serif', fontWeight: 800, fontSize: '.97rem', textDecoration: 'none', display: 'block', boxShadow: '0 6px 20px rgba(39,174,96,.35)' }}
           >
-            📲 Quiero mi cita ahora
+            Quiero mi cita ahora
           </a>
           <button
             onClick={close}

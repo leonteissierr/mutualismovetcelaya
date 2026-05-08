@@ -12,65 +12,65 @@ const serviceData: Record<string, {
 }> = {
   bienestar: {
     title: 'Bienestar',
-    icon: '🩺',
-    desc: 'Cuidamos la salud preventiva de tu mascota con servicios de vacunación, chequeos generales, baño y estética, y profilaxis dental.',
+    icon: '',
+    desc: 'El cuidado preventivo de hoy evita los problemas de mañana. Vacunación, revisiones periódicas, estética y salud dental para que tu mascota esté siempre en su mejor estado.',
     items: [
-      { icon: '💉', title: 'Vacunación', desc: 'Esquemas completos para perros y gatos con vacunas de primera calidad, siguiendo el calendario recomendado por tu especie y edad.' },
-      { icon: '🔍', title: 'Checkup Preventivo', desc: 'Revisión integral para detectar cualquier problema a tiempo: peso, temperatura, corazón, dientes, oídos y más.' },
-      { icon: '✂️', title: 'Estética Canina y Felina', desc: 'Baño, corte, limpieza de oídos, cepillado y retiro de pelaje muerto para que tu mascota luzca perfecta.' },
-      { icon: '🦷', title: 'Limpieza Dental', desc: 'Profilaxis dental profesional para prevenir enfermedades periodontales y mantener una higiene bucal óptima.' },
+      { icon: '', title: 'Vacunación', desc: 'Protegemos a tu mascota con esquemas de vacunación adaptados a su edad, raza y estilo de vida, usando las mejores vacunas disponibles en el mercado.' },
+      { icon: '', title: 'Revisión General', desc: 'Evaluación física completa: peso, temperatura, condición corporal, revisión dental, auditiva y ocular. Detectamos cambios antes de que se vuelvan problemas mayores.' },
+      { icon: '', title: 'Baño y Estética', desc: 'Baño con productos especializados por tipo de pelaje, corte personalizado, limpieza de oídos, recorte de uñas y cepillado. Un momento de cuidado que también refuerza tu vínculo con ella.' },
+      { icon: '', title: 'Limpieza Dental', desc: 'Profilaxis dental profesional con ultrasonido para eliminar sarro y bacterias. La salud bucal impacta directamente el bienestar general de tu mascota.' },
     ],
   },
   diagnostico: {
     title: 'Diagnóstico',
-    icon: '🔬',
-    desc: 'Contamos con equipos modernos de diagnóstico para identificar con precisión cualquier condición de salud en tu mascota.',
+    icon: '',
+    desc: 'Encontrar la respuesta correcta es el primer paso del tratamiento. Con laboratorio propio, radiografía digital y ultrasonido bajo el mismo techo, llegamos al diagnóstico sin demoras.',
     items: [
-      { icon: '', title: 'Análisis de Laboratorio', desc: 'Hemograma completo, química sanguínea, urianálisis y cultivos para diagnóstico preciso y rápido.' },
-      { icon: '', title: 'Rayos X', desc: 'Radiografías digitales de alta calidad para evaluar huesos, órganos y detectar anomalías internas.' },
-      { icon: '', title: 'Ultrasonido', desc: 'Ecografía abdominal y cardíaca para visualizar órganos internos en tiempo real sin dolor ni estrés.' },
+      { icon: '', title: 'Laboratorio Clínico', desc: 'Laboratorio propio para hemogramas, químicas sanguíneas, urianálisis y cultivos. Resultados rápidos para decisiones médicas informadas.' },
+      { icon: '', title: 'Radiografía Digital', desc: 'Imágenes de alta resolución para evaluar huesos, pulmones, corazón y órganos abdominales. Diagnósticos precisos con el menor estrés posible para tu mascota.' },
+      { icon: '', title: 'Ultrasonido', desc: 'Ecografía abdominal y cardíaca en tiempo real sin procedimientos invasivos. Ideal para detectar masas, líquidos y alteraciones en órganos internos.' },
     ],
   },
   urgencias: {
-    title: 'Urgencias',
-    icon: '🚨',
-    desc: 'Disponibles las 24 horas del día, los 365 días del año. Tu mascota nunca estará sola en una emergencia.',
+    title: 'Urgencias 24/7',
+    icon: '',
+    desc: 'Las emergencias no avisan. Por eso estamos disponibles toda la noche, todos los días del año. Llámanos o escríbenos: siempre habrá alguien listo para ayudarte.',
     items: [
-      { icon: '', title: 'Atención Inmediata 24h', desc: 'Equipo médico disponible en todo momento para emergencias críticas. Sin cita, sin esperas innecesarias.' },
-      { icon: '', title: 'Hospitalización Intensiva', desc: 'Unidad de cuidados intensivos con monitoreo constante de signos vitales y atención especializada.' },
+      { icon: '', title: 'Atención a Cualquier Hora', desc: 'Equipo disponible las 24 horas, todos los días del año. Contáctanos por teléfono o WhatsApp y te orientamos de inmediato sobre los pasos a seguir.' },
+      { icon: '', title: 'Hospitalización y Seguimiento', desc: 'Área de hospitalización con revisiones periódicas, medicación controlada y atención cercana para que tu mascota regrese a casa en las mejores condiciones.' },
     ],
   },
   especialidades: {
     title: 'Especialidades',
-    icon: '⭐',
-    desc: 'Especialistas altamente calificados para condiciones complejas que requieren atención avanzada y enfoque multidisciplinario.',
+    icon: '',
+    desc: 'Hay momentos en que tu mascota necesita más que una consulta general. Nuestras especialidades están aquí para esos casos: ortopedia, cardiología, oftalmología y oncología.',
     items: [
-      { icon: '', title: 'Ortopedia', desc: 'Tratamiento de fracturas, displasia de cadera, luxaciones y enfermedades articulares con técnicas mínimamente invasivas.' },
-      { icon: '', title: 'Cardiología', desc: 'Diagnóstico y manejo de enfermedades cardíacas congénitas y adquiridas con ecocardiografía especializada.' },
-      { icon: '', title: 'Oftalmología', desc: 'Evaluación y tratamiento de cataratas, glaucoma, enfermedades de córnea y otras patologías oculares.' },
-      { icon: '', title: 'Oncología', desc: 'Diagnóstico, estadificación y tratamiento de tumores con quimioterapia, cirugía y seguimiento integral.' },
+      { icon: '', title: 'Ortopedia', desc: 'Evaluación y tratamiento de displasia de cadera, luxación de rótula, fracturas complejas y enfermedades articulares. El objetivo: devolver la movilidad y calidad de vida.' },
+      { icon: '', title: 'Cardiología', desc: 'Diagnóstico y manejo de enfermedades cardíacas mediante auscultación, electrocardiografía y ecocardiografía, ajustando el tratamiento a cada paciente.' },
+      { icon: '', title: 'Oftalmología', desc: 'Evaluación y tratamiento de cataratas, úlceras corneales, glaucoma y otras condiciones oculares. La detección temprana marca la diferencia en el pronóstico.' },
+      { icon: '', title: 'Oncología', desc: 'Plan integral que puede incluir quimioterapia, seguimiento postquirúrgico y cuidados paliativos. Acompañamiento honesto y cercano en cada etapa del tratamiento.' },
     ],
   },
   cirugias: {
     title: 'Cirugías',
-    icon: '✂️',
-    desc: 'Quirófano equipado con tecnología de punta y equipo médico certificado para garantizar la seguridad de tu mascota en cada procedimiento.',
+    icon: '',
+    desc: 'Quirófano equipado y médicos certificados para cada tipo de procedimiento. Desde esterilizaciones de rutina hasta intervenciones complejas, la seguridad de tu mascota es siempre la prioridad.',
     items: [
-      { icon: '', title: 'Esterilización', desc: 'Ovariohisterectomía y orquiectomía con técnicas modernas para una recuperación rápida y segura.' },
-      { icon: '', title: 'Cirugía Ortopédica', desc: 'Corrección de fracturas, ligamentos y articulaciones con implantes de última generación.' },
-      { icon: '', title: 'Cirugía de Tejidos Blandos', desc: 'Procedimientos gastrointestinales, urológicos, reproductivos y de piel con mínima invasión.' },
-      { icon: '', title: 'Cirugía Oncológica', desc: 'Extirpación de tumores y masas con márgenes oncológicos adecuados y biopsia para diagnóstico.' },
+      { icon: '', title: 'Esterilización', desc: 'Uno de los procedimientos más beneficiosos para tu mascota. Reduce riesgo de enfermedades reproductivas, mejora el comportamiento y contribuye a una vida más larga.' },
+      { icon: '', title: 'Cirugía Ortopédica', desc: 'Corrección de fracturas, ruptura de ligamentos y displasias con técnicas actualizadas y materiales de calidad para una recuperación funcional efectiva.' },
+      { icon: '', title: 'Cirugía de Tejidos Blandos', desc: 'Procedimientos gastrointestinales, urológicos, reproductivos y cutáneos con mínima invasión y protocolo anestésico personalizado para cada paciente.' },
+      { icon: '', title: 'Cirugía Oncológica', desc: 'Extirpación de tumores y masas con márgenes adecuados, biopsia y seguimiento coordinado. Trabajamos con transparencia y acompañamiento en cada etapa.' },
     ],
   },
   'otros-servicios': {
     title: 'Otros Servicios',
-    icon: '📋',
-    desc: 'Servicios complementarios para el bienestar integral de tu mascota y para facilitar tu vida como dueño responsable.',
+    icon: '',
+    desc: 'Más allá de la consulta y la cirugía, tenemos todo lo que necesitas como dueño responsable: microchip, certificados, comportamiento y farmacia en un mismo lugar.',
     items: [
-      { icon: '', title: 'Certificados de Viaje', desc: 'Certificado de salud oficial para viajes nacionales e internacionales. Asesoría sobre requisitos por país.' },
-      { icon: '', title: 'Etología', desc: 'Evaluación y tratamiento de problemas de conducta: agresividad, ansiedad, miedos y más.' },
-      { icon: '', title: 'Farmacia Veterinaria', desc: 'Amplio surtido de medicamentos, antiparasitarios, vitaminas y suplementos para tu mascota.' },
-      { icon: '', title: 'Microchip', desc: 'Identificación permanente y segura con chip electrónico compatible con el registro nacional.' },
+      { icon: '', title: 'Certificados de Viaje', desc: 'Expedimos el certificado de salud oficial para viajes nacionales e internacionales y te asesoramos sobre los requisitos sanitarios de cada destino.' },
+      { icon: '', title: 'Consultoría en Comportamiento', desc: 'Plan de manejo personalizado para agresividad, ansiedad de separación, miedos y comportamientos destructivos, adaptado a la personalidad y entorno de tu mascota.' },
+      { icon: '', title: 'Farmacia Veterinaria', desc: 'Amplio surtido de medicamentos, antiparasitarios, vitaminas y suplementos de marcas confiables. Te asesoramos siempre sobre el uso correcto de cada producto.' },
+      { icon: '', title: 'Identificación con Microchip', desc: 'Colocación rápida e indolora de microchip con registro permanente compatible con los sistemas de identificación en México. Un pequeño paso con un gran impacto.' },
     ],
   },
 };
@@ -150,7 +150,7 @@ export default async function ServicioPage({ params }: { params: Promise<{ slug:
             rel="noopener noreferrer"
             className="btn btn-sky"
           >
-            📲 Agendar por WhatsApp
+            Agendar por WhatsApp
           </a>
         </div>
       </section>

@@ -88,12 +88,21 @@ export default function Hero() {
         ref={canvasRef}
         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', opacity: 0.18, zIndex: 0 }}
       />
+      <div className="hero-stats">
+        <div className="hstat"><span className="hstat-num">+20</span><span className="hstat-lbl">años de experiencia</span></div>
+        <div className="hstat-div" />
+        <div className="hstat"><span className="hstat-num">2</span><span className="hstat-lbl">sucursales en Celaya</span></div>
+        <div className="hstat-div" />
+        <div className="hstat"><span className="hstat-num">24/7</span><span className="hstat-lbl">atención de emergencias</span></div>
+        <div className="hstat-div" />
+        <div className="hstat"><span className="hstat-num">+5,000</span><span className="hstat-lbl">mascotas atendidas</span></div>
+      </div>
       <div className="hero-in">
         <div>
           <h1>
             Cuidamos a tu mascota
             <br />
-            como <span className="italic-accent">familia</span> 🐾
+            como <span className="italic-accent">familia</span>
           </h1>
           <p className="hsub">
             Atención veterinaria profesional con el calor y dedicación que tu compañero merece.
@@ -106,7 +115,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="btn btn-grn"
             >
-              📲 Agendar por WhatsApp
+              Agendar por WhatsApp
             </a>
             <a href="#servicios" className="btn btn-out">
               Ver Servicios

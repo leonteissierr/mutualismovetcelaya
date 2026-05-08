@@ -1,112 +1,79 @@
-'use client';
-import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const services = [
-  { slug: 'bienestar',       title: 'Bienestar',       desc: 'Vacunas, checkups, spa y limpieza dental para mascotas saludables.',        img: '/logoservicios/1.png' },
-  { slug: 'diagnostico',     title: 'Diagnóstico',     desc: 'Análisis de laboratorio, Rayos X y Ultrasonidos precisos.',                 img: '/logoservicios/2.png' },
-  { slug: 'urgencias',       title: 'Urgencias',       desc: 'Atención 24/7 y hospitalización para esos momentos críticos.',              img: '/logoservicios/3.png' },
-  { slug: 'especialidades',  title: 'Especialidades',  desc: 'Ortopedia, Cardiología, Oftalmología y Oncología.',                        img: '/logoservicios/4.png' },
-  { slug: 'cirugias',        title: 'Cirugía',         desc: 'Desde esterilizaciones hasta intervenciones de tejidos y huesos.',          img: '/logoservicios/5.png' },
-  { slug: 'otros-servicios', title: 'Otros Servicios', desc: 'Certificados de viaje, etología, farmacia y microchip.',                   img: '/logoservicios/6.png' },
+  {
+    slug: 'bienestar',
+    num: '01',
+    title: 'Bienestar',
+    desc: 'Vacunas, revisiones preventivas, estética y limpieza dental. El cuidado cotidiano que mantiene a tu mascota sana y feliz.',
+    img: '/logoservicios/1.png',
+  },
+  {
+    slug: 'diagnostico',
+    num: '02',
+    title: 'Diagnóstico',
+    desc: 'Laboratorio propio, radiografías digitales y ultrasonido para llegar al diagnóstico correcto sin demoras.',
+    img: '/logoservicios/2.png',
+  },
+  {
+    slug: 'urgencias',
+    num: '03',
+    title: 'Urgencias 24/7',
+    desc: 'Disponibles toda la noche, todos los días del año. Porque las emergencias no avisan y tu mascota no puede esperar.',
+    img: '/logoservicios/3.png',
+  },
+  {
+    slug: 'especialidades',
+    num: '04',
+    title: 'Especialidades',
+    desc: 'Ortopedia, cardiología, oftalmología y oncología. Atención de alto nivel cuando tu mascota necesita más.',
+    img: '/logoservicios/4.png',
+  },
+  {
+    slug: 'cirugias',
+    num: '05',
+    title: 'Cirugías',
+    desc: 'Quirófano moderno y médicos certificados para esterilizaciones, cirugías ortopédicas y procedimientos complejos.',
+    img: '/logoservicios/5.png',
+  },
+  {
+    slug: 'otros-servicios',
+    num: '06',
+    title: 'Otros Servicios',
+    desc: 'Microchip, certificados de viaje, consultoría en comportamiento y farmacia veterinaria. Todo en un lugar.',
+    img: '/logoservicios/6.png',
+  },
 ];
 
-const VISIBLE = 3;
-
 export default function Servicios() {
-  const [idx, setIdx] = useState(0);
-  const viewportRef = useRef<HTMLDivElement>(null);
-  const cardRef = useRef<HTMLDivElement>(null);
-  const max = services.length - VISIBLE;
-
-  const scrollTo = useCallback((i: number) => {
-    if (!viewportRef.current || !cardRef.current) return;
-    const step = cardRef.current.offsetWidth + 24; // card + 1.5rem gap
-    viewportRef.current.scrollTo({ left: i * step, behavior: 'smooth' });
-    setIdx(i);
-  }, []);
-
-  const prev = () => scrollTo(Math.max(0, idx - 1));
-  const next = () => scrollTo(Math.min(max, idx + 1));
-
-  // Keep idx in sync when the user scrolls manually (touch/mobile)
-  useEffect(() => {
-    const el = viewportRef.current;
-    if (!el) return;
-    const onScroll = () => {
-      if (!cardRef.current) return;
-      const step = cardRef.current.offsetWidth + 24;
-      const i = Math.round(el.scrollLeft / step);
-      setIdx(Math.min(max, Math.max(0, i)));
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, [max]);
-
   return (
     <section id="servicios">
       <div className="wrap">
-        <div className="sec-hdr reveal">
-          <span className="sec-lbl">Nuestros Servicios</span>
-          <h2 className="sec-h">
-            Todo lo que tu mascota <span>necesita</span>, en un solo lugar
-          </h2>
-          <p className="sec-sub">
-            Servicios veterinarios completos con atención personalizada.
+        <div className="svc-top reveal">
+          <div>
+            <span className="sec-lbl">Lo que hacemos</span>
+            <h2 className="sec-h">
+              Atención completa<br />bajo un mismo techo
+            </h2>
+          </div>
+          <p className="svc-top-sub">
+            Más de 20 años cuidando mascotas en Celaya nos enseñaron que cada consulta, cada vacuna
+            y cada emergencia merecen el mismo nivel de compromiso y dedicación.
           </p>
         </div>
 
-        <div className="carousel-outer">
-          <button
-            className="carousel-arrow carousel-prev"
-            onClick={prev}
-            disabled={idx === 0}
-            aria-label="Anterior"
-          >
-            ‹
-          </button>
-
-          <div className="carousel-viewport" ref={viewportRef}>
-            <div className="carousel-track">
-              {services.map((s, i) => (
-                <div
-                  key={s.slug}
-                  className="carousel-card"
-                  ref={i === 0 ? cardRef : undefined}
-                >
-                  <div className="carousel-icon">
-                    <Image src={s.img} alt={s.title} width={64} height={64} style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
-                  </div>
-                  <h3 className="carousel-title">{s.title}</h3>
-                  <p className="carousel-desc">{s.desc}</p>
-                  <Link href={`/servicios/${s.slug}`} className="carousel-link">
-                    Ver más →
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <button
-            className="carousel-arrow carousel-next"
-            onClick={next}
-            disabled={idx === max}
-            aria-label="Siguiente"
-          >
-            ›
-          </button>
-        </div>
-
-        {/* Dots */}
-        <div className="carousel-dots">
-          {Array.from({ length: max + 1 }).map((_, i) => (
-            <button
-              key={i}
-              className={`carousel-dot${i === idx ? ' active' : ''}`}
-              onClick={() => scrollTo(i)}
-              aria-label={`Ir a ${i + 1}`}
-            />
+        <div className="svc-grid">
+          {services.map((s) => (
+            <Link key={s.slug} href={`/servicios/${s.slug}`} className="svc-card">
+              <span className="svc-num">{s.num}</span>
+              <div className="svc-card-icon">
+                <Image src={s.img} alt={s.title} width={52} height={52} style={{ objectFit: 'contain', width: '100%', height: 'auto' }} />
+              </div>
+              <h3 className="svc-card-title">{s.title}</h3>
+              <p className="svc-card-desc">{s.desc}</p>
+              <span className="svc-card-link">Conocer más →</span>
+            </Link>
           ))}
         </div>
       </div>

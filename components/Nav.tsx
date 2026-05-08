@@ -67,19 +67,26 @@ export default function Nav() {
               Servicios <span className="drop-arrow">▾</span>
             </a>
             <div className="dropdown">
-              <div className="drop-grid">
-                {services.map((s) => (
+              <div className="drop-panel">
+                <div>
+                  <div className="drop-panel-title">Nuestros servicios</div>
+                  <p className="drop-panel-sub">Atención veterinaria completa en dos sucursales en Celaya.</p>
+                </div>
+                <Link href="/#servicios" className="drop-panel-link" onClick={() => { setDropOpen(false); closeMenu(); }}>
+                  Ver todos →
+                </Link>
+              </div>
+              <div className="drop-list">
+                {services.map((s, i) => (
                   <Link
                     key={s.slug}
                     href={`/servicios/${s.slug}`}
-                    className="drop-item"
+                    className="drop-row"
                     onClick={() => { setDropOpen(false); closeMenu(); }}
                   >
-                    <div className="drop-icon"><Image src={s.img} alt={s.title} width={28} height={28} style={{ objectFit: 'contain' }} /></div>
-                    <div>
-                      <strong className="drop-title">{s.title}</strong>
-                      <p className="drop-desc">{s.desc}</p>
-                    </div>
+                    <span className="drop-row-num">0{i + 1}</span>
+                    <span className="drop-row-name">{s.title}</span>
+                    <span className="drop-row-arrow">→</span>
                   </Link>
                 ))}
               </div>
@@ -96,7 +103,7 @@ export default function Nav() {
               className="nc"
               onClick={closeMenu}
             >
-              📲 Agendar
+              Agendar
             </a>
           </li>
         </ul>

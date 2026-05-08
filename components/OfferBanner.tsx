@@ -21,11 +21,11 @@ export default function OfferBanner() {
       boxSizing: 'border-box',
     }}>
       <span style={{ fontSize: '.875rem', fontWeight: 500, textAlign: 'center' }}>
-        🐾 <strong>Bienvenido a Veterinaria Mutualismo</strong> — En tu primera consulta recibe{' '}
+        <strong>Bienvenido a Veterinaria Mutualismo</strong> — En tu primera consulta recibe{' '}
         <strong>asesoría gratis de alimento</strong> y conoce nuestro cuidado médico integral.
       </span>
       <a
-        href="https://wa.me/524424659302?text=Hola%2C%20quiero%20agendar%20mi%20primera%20consulta%20🐾"
+        href="https://wa.me/524424659302?text=Hola%2C%20quiero%20agendar%20mi%20primera%20consulta"
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -40,7 +40,7 @@ export default function OfferBanner() {
           flexShrink: 0,
         }}
       >
-        📲 Agendar por WhatsApp
+        Agendar por WhatsApp
       </a>
       <button
         onClick={() => setVisible(false)}

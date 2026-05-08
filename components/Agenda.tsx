@@ -29,10 +29,10 @@ export default function Agenda() {
   const [owner, setOwner] = useState('');
   const [date, setDate] = useState('');
   const [agData, setAgData] = useState<AgData>({
-    type: '🐶 Perro',
+    type: 'Perro',
     service: '',
-    branch: '🏥 Mutualismo (Matriz)',
-    time: '🌅 Mañana (9am-12pm)',
+    branch: 'Mutualismo (Matriz)',
+    time: 'Mañana (9am-12pm)',
   });
   const tomorrow = getTomorrow();
 
@@ -46,28 +46,28 @@ export default function Agenda() {
 
   const buildMsg = () => {
     const petInfo = petName + (breed ? ` (${breed})` : '') + ' — ' + agData.type;
-    const branchClean = agData.branch.replace('🏥 ', '').replace('🌿 ', '');
+    const branchClean = agData.branch;
     const timeClean = agData.time.split('\n')[0].trim();
     const dateStr = date ? formatDate(date) : '___';
     return (
-      'Hola Veterinaria Mutualismo 🐾\n' +
+      'Hola Veterinaria Mutualismo\n' +
       'Quiero agendar una cita:\n\n' +
-      `📋 Servicio: ${agData.service || '___'}\n` +
-      `🐾 Mascota: ${petInfo}\n` +
-      `📍 Sucursal: ${branchClean}\n` +
-      `📅 Fecha preferida: ${dateStr}\n` +
-      `🕐 Horario: ${timeClean}\n` +
-      `👤 Mi nombre: ${owner || '___'}\n\n` +
+      `Servicio: ${agData.service || '___'}\n` +
+      `Mascota: ${petInfo}\n` +
+      `Sucursal: ${branchClean}\n` +
+      `Fecha preferida: ${dateStr}\n` +
+      `Horario: ${timeClean}\n` +
+      `Mi nombre: ${owner || '___'}\n\n` +
       '¿Tienen disponibilidad? ¡Gracias!'
     );
   };
 
   const goNext = (from: number) => {
-    if (from === 1 && !petName.trim()) { alert('Por favor ingresa el nombre de tu mascota 🐾'); return; }
-    if (from === 2 && !agData.service) { alert('Por favor selecciona un servicio 🩺'); return; }
+    if (from === 1 && !petName.trim()) { alert('Por favor ingresa el nombre de tu mascota'); return; }
+    if (from === 2 && !agData.service) { alert('Por favor selecciona un servicio'); return; }
     if (from === 3) {
-      if (!owner.trim()) { alert('Por favor ingresa tu nombre 👤'); return; }
-      if (!date) { alert('Por favor selecciona una fecha 📅'); return; }
+      if (!owner.trim()) { alert('Por favor ingresa tu nombre'); return; }
+      if (!date) { alert('Por favor selecciona una fecha'); return; }
     }
     setStep(from + 1);
   };
@@ -125,8 +125,8 @@ export default function Agenda() {
               <div className="ag-field">
                 <label>Tipo de mascota *</label>
                 <div className="ag-options">
-                  <OptBtn group="type" value="🐶 Perro" />
-                  <OptBtn group="type" value="🐱 Gato" />
+                  <OptBtn group="type" value="Perro" />
+                  <OptBtn group="type" value="Gato" />
                 </div>
               </div>
               <div className="ag-field">
@@ -166,7 +166,7 @@ export default function Agenda() {
               <div className="ag-field">
                 <label>Servicio *</label>
                 <div className="ag-options">
-                  {['🩺 Consulta', '💉 Vacunación', '✂️ Estética', '🔬 Cirugía', '🏥 Hospitalización', '🛒 Compra producto'].map((s) => (
+                  {['Consulta', 'Vacunación', 'Estética', 'Cirugía', 'Hospitalización', 'Compra producto'].map((s) => (
                     <OptBtn key={s} group="service" value={s} />
                   ))}
                 </div>
@@ -174,8 +174,8 @@ export default function Agenda() {
               <div className="ag-field">
                 <label>Sucursal</label>
                 <div className="ag-options">
-                  <OptBtn group="branch" value="🏥 Mutualismo (Matriz)" />
-                  <OptBtn group="branch" value="🌿 Nuevo Celaya (Sucursal)" />
+                  <OptBtn group="branch" value="Mutualismo (Matriz)" />
+                  <OptBtn group="branch" value="Nuevo Celaya (Sucursal)" />
                 </div>
               </div>
               <div className="agenda-nav">
@@ -193,7 +193,7 @@ export default function Agenda() {
               <div className="ag-field">
                 <label>Horario preferido</label>
                 <div className="ag-options cols3">
-                  {['🌅 Mañana (9am-12pm)', '☀️ Mediodía (12-3pm)', '🌆 Tarde (3-7pm)'].map((t) => (
+                  {['Mañana (9am-12pm)', 'Mediodía (12-3pm)', 'Tarde (3-7pm)'].map((t) => (
                     <OptBtn key={t} group="time" value={t} />
                   ))}
                 </div>
@@ -217,7 +217,7 @@ export default function Agenda() {
               <div className="agenda-nav">
                 <button className="btn-back" onClick={() => setStep(2)}>← Atrás</button>
                 <button className="btn btn-grn" onClick={sendWA}>
-                  📲 Enviar por WhatsApp
+                  Enviar por WhatsApp
                 </button>
               </div>
             </div>

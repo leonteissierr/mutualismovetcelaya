@@ -1,11 +1,10 @@
+import Image from 'next/image';
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
 import Servicios from '@/components/Servicios';
 import Productos from '@/components/Productos';
-import Calculadora from '@/components/Calculadora';
 import Agenda from '@/components/Agenda';
 import Galeria from '@/components/Galeria';
-import Marcas from '@/components/Marcas';
 import Pension from '@/components/Pension';
 import Diferenciadores from '@/components/Diferenciadores';
 import FAQ from '@/components/FAQ';
@@ -27,10 +26,8 @@ export default function Home() {
       <Hero />
       <Servicios />
       <Productos />
-      <Calculadora />
       <Agenda />
       <Galeria />
-      <Marcas />
       <Pension />
       <Diferenciadores />
 
@@ -48,20 +45,20 @@ export default function Home() {
         className="fwa"
         title="WhatsApp"
       >
-        💬
+        <Image src="/barrabaja/whatsappblanco.png" alt="WhatsApp" width={30} height={30} style={{ objectFit: 'contain' }} />
       </a>
       <BackToTop />
 
       {/* Mobile CTA bar */}
       <div className="mobile-cta-bar">
-        <a href="tel:4616155620" className="mcta-btn mcta-call">📞 Llamar</a>
+        <a href="tel:4616155620" className="mcta-btn mcta-call">Llamar</a>
         <a
-          href="https://wa.me/524424659302?text=Hola%2C%20quiero%20agendar%20🐾"
+          href="https://wa.me/524424659302?text=Hola%2C%20quiero%20agendar"
           target="_blank"
           rel="noopener noreferrer"
           className="mcta-btn mcta-wa"
         >
-          💬 WhatsApp
+          WhatsApp
         </a>
       </div>
 
