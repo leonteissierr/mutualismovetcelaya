@@ -26,9 +26,32 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Clínica Veterinaria Mutualismo | Celaya, Gto.",
+  title: "Veterinaria Mutualismo | Clínica Veterinaria en Celaya, Guanajuato",
   description:
-    "Atención veterinaria profesional con el calor y dedicación que tu compañero merece. Más de 20 años cuidando mascotas en Celaya, Guanajuato. Emergencias 24/7.",
+    "Veterinaria Mutualismo en Celaya, Gto. Más de 20 años de experiencia. Consultas, vacunación, cirugías, estética, hospitalización y emergencias 24/7. 2 sucursales.",
+  keywords: [
+    "veterinaria Celaya",
+    "veterinaria Mutualismo",
+    "clínica veterinaria Celaya",
+    "veterinario Celaya Guanajuato",
+    "vacunación mascotas Celaya",
+    "cirugía veterinaria Celaya",
+    "emergencias veterinarias 24 horas Celaya",
+    "estética canina Celaya",
+    "hospitalización mascotas Celaya",
+  ],
+  metadataBase: new URL("https://www.veterinariamutualismo.com"),
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Veterinaria Mutualismo | Celaya, Guanajuato",
+    description:
+      "Más de 20 años cuidando mascotas en Celaya. Consultas, cirugías, estética y emergencias 24/7. 2 sucursales.",
+    url: "https://www.veterinariamutualismo.com",
+    siteName: "Veterinaria Mutualismo",
+    locale: "es_MX",
+    type: "website",
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
