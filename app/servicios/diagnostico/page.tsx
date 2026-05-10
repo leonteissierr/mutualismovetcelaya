@@ -71,9 +71,6 @@ export default function DiagnosticoPage() {
           <div className="svc-feat-grid">
             {sections.map((s) => (
               <div key={s.title} className="svc-feat reveal slide-up">
-                <div className="svc-feat-photo">
-                  <Image src={s.photo} alt={s.photoAlt} fill style={{ objectFit: 'cover', objectPosition: 'center top' }} sizes="(max-width:768px) 100vw, 50vw" />
-                </div>
                 <div className="svc-feat-body">
                   <div className="svc-feat-illus">
                     <Image src={s.illustration} alt={s.title} width={70} height={70} style={{ objectFit: 'contain', width: '100%', height: 'auto' }} />

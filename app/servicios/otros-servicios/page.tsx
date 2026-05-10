@@ -19,13 +19,6 @@ const sections = [
     photoAlt: 'Mascota lista para viajar Veterinaria Mutualismo Celaya',
   },
   {
-    title: 'Consultoría en Comportamiento',
-    desc: 'Agresividad, ansiedad de separación, miedos y comportamientos destructivos tienen solución. Evaluamos a tu mascota y diseñamos un plan de manejo adaptado a su personalidad, historial y entorno familiar para mejorar la convivencia.',
-    illustration: '/servicios/consuulta.png',
-    photo: '/pacientes/paciente-2.jpeg',
-    photoAlt: 'Consulta de comportamiento Veterinaria Mutualismo Celaya',
-  },
-  {
     title: 'Farmacia Veterinaria',
     desc: 'Amplio surtido de medicamentos, antiparasitarios, vitaminas y suplementos de marcas confiables. Te asesoramos sobre el uso correcto de cada producto y vendemos solo lo que tu mascota realmente necesita, siempre con orientación profesional.',
     illustration: '/servicios/profilaxiss.png',
@@ -78,9 +71,6 @@ export default function OtrosServiciosPage() {
           <div className="svc-feat-grid">
             {sections.map((s) => (
               <div key={s.title} className="svc-feat reveal slide-up">
-                <div className="svc-feat-photo">
-                  <Image src={s.photo} alt={s.photoAlt} fill style={{ objectFit: 'cover', objectPosition: 'center top' }} sizes="(max-width:768px) 100vw, 50vw" />
-                </div>
                 <div className="svc-feat-body">
                   <div className="svc-feat-illus">
                     <Image src={s.illustration} alt={s.title} width={70} height={70} style={{ objectFit: 'contain', width: '100%', height: 'auto' }} />

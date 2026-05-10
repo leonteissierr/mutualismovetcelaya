@@ -7,7 +7,6 @@ import OfferBanner from '@/components/OfferBanner';
 const services = [
   { slug: 'bienestar',       title: 'Bienestar',       desc: 'Checkups preventivos, vacunación, estética y limpiezas dentales.',    img: '/logoservicios/1.png' },
   { slug: 'diagnostico',     title: 'Diagnóstico',     desc: 'Análisis de laboratorio, Rayos X y Ultrasonidos.',                   img: '/logoservicios/2.png' },
-  { slug: 'urgencias',       title: 'Urgencias',       desc: 'Atención de emergencia 24h y hospitalización intensiva.',             img: '/logoservicios/3.png' },
   { slug: 'especialidades',  title: 'Especialidades',  desc: 'Ortopedia, Cardiología, Oftalmología y Oncología.',                  img: '/logoservicios/4.png' },
   { slug: 'cirugias',        title: 'Cirugías',        desc: 'Desde esterilizaciones hasta procedimientos complejos.',             img: '/logoservicios/5.png' },
   { slug: 'otros-servicios', title: 'Otros Servicios', desc: 'Certificados de viaje, etología y farmacia.',                       img: '/logoservicios/6.png' },
@@ -17,6 +16,16 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropOpen, setDropOpen] = useState(false);
   const dropRef = useRef<HTMLLIElement>(null);
+  const dropTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openDrop = () => {
+    if (dropTimer.current) clearTimeout(dropTimer.current);
+    setDropOpen(true);
+  };
+
+  const closeDrop = () => {
+    dropTimer.current = setTimeout(() => setDropOpen(false), 200);
+  };
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -56,8 +65,8 @@ export default function Nav() {
           <li
             ref={dropRef}
             className={`has-drop${dropOpen ? ' drop-open' : ''}`}
-            onMouseEnter={() => setDropOpen(true)}
-            onMouseLeave={() => setDropOpen(false)}
+            onMouseEnter={openDrop}
+            onMouseLeave={closeDrop}
           >
             <a
               href="/#servicios"
