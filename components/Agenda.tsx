@@ -214,6 +214,10 @@ export default function Agenda() {
               </div>
               <div className="wa-preview-label">Vista previa del mensaje:</div>
               <div className="wa-preview">{buildMsg()}</div>
+              <p style={{ fontSize: '.75rem', color: 'var(--text2)', textAlign: 'center', marginTop: '.5rem' }}>
+                Al enviar aceptas nuestro{' '}
+                <a href="/aviso-de-privacidad" style={{ color: 'var(--sky)' }}>Aviso de Privacidad</a>.
+              </p>
               <div className="agenda-nav">
                 <button className="btn-back" onClick={() => setStep(2)}>← Atrás</button>
                 <button className="btn btn-grn" onClick={sendWA}>

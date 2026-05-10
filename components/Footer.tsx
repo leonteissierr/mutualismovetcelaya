@@ -44,7 +44,7 @@ export default function Footer() {
       </div>
       <div className="fbot">
         <span>© 2025 Veterinaria Mutualismo · Celaya, Guanajuato, México</span>
-        <span>Hecho con cariño para las mascotas de Celaya</span>
+        <a href="/aviso-de-privacidad" style={{ color: 'rgba(255,255,255,.6)', fontSize: '.82rem', textDecoration: 'none' }}>Aviso de Privacidad</a>
       </div>
     </footer>
   );

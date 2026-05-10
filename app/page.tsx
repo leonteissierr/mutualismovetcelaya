@@ -8,7 +8,6 @@ import Galeria from '@/components/Galeria';
 import Pension from '@/components/Pension';
 import Diferenciadores from '@/components/Diferenciadores';
 import FAQ from '@/components/FAQ';
-import Testimonios from '@/components/Testimonios';
 import Contacto from '@/components/Contacto';
 import Footer from '@/components/Footer';
 import ScrollEffects from '@/components/ScrollEffects';
@@ -32,7 +31,6 @@ export default function Home() {
       <Diferenciadores />
 
       <FAQ />
-      <Testimonios />
       <Contacto />
       <Footer />
 

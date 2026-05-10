@@ -114,27 +114,25 @@ export default function Contacto() {
         <div className="branch-maps">
           <div>
             <div className="map-label">Matriz — Mutualismo</div>
-            <div className="map-w">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.0!2d-100.8103!3d20.5230!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMutualismo+605%2C+Celaya!5e0!3m2!1ses!2smx!4v1700000000"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Matriz Mutualismo"
-              />
-            </div>
+            <a
+              href="https://maps.google.com/?q=Mutualismo+605+Local+B,+Celaya,+Guanajuato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="map-link-btn"
+            >
+              Ver ubicación en Google Maps →
+            </a>
           </div>
           <div>
             <div className="map-label">Sucursal — Nuevo Celaya</div>
-            <div className="map-w">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.5!2d-100.8250!3d20.5180!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s12+de+Octubre%2C+Nuevo+Celaya!5e0!3m2!1ses!2smx!4v1700000001"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Sucursal Nuevo Celaya"
-              />
-            </div>
+            <a
+              href="https://maps.google.com/?q=12+de+Octubre+S/N,+Nuevo+Celaya,+Celaya,+Guanajuato"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="map-link-btn"
+            >
+              Ver ubicación en Google Maps →
+            </a>
           </div>
         </div>
       </div>
