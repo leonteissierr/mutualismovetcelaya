@@ -292,7 +292,7 @@ footer{background:var(--footer-bg);color:#fff;padding:3rem 1.5rem 2rem}
 .drop-panel::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.07);pointer-events:none}
 .drop-panel-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:900;color:#fff;line-height:1.25;margin-bottom:.5rem}
 .drop-panel-sub{font-size:.73rem;color:rgba(255,255,255,.68);line-height:1.6}
-.drop-panel-link{font-size:.76rem;font-weight:700;color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:.3rem;margin-top:1.5rem;background:rgba(255,255,255,.15);padding:.4rem .85rem;border-radius:20px;width:fit-content;transition:background .2s}.drop-panel-link:hover{background:rgba(255,255,255,.25)}
+.drop-panel-link{font-size:.76rem;font-weight:700;color:#0b3d6e;text-decoration:none;display:inline-flex;align-items:center;gap:.3rem;margin-top:1.5rem;background:#fff;padding:.4rem .85rem;border-radius:20px;width:fit-content;transition:background .2s}.drop-panel-link:hover{background:rgba(255,255,255,.85)}
 .drop-list{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:.35rem;padding:.8rem}
 .drop-row{display:flex;align-items:center;gap:.65rem;padding:.75rem 1rem;text-decoration:none;color:var(--text);border-radius:12px;transition:background .15s,transform .15s}
 .drop-row:hover{background:var(--sky-p);transform:translateX(2px)}
