@@ -38,7 +38,7 @@ export default function Footer() {
             <li><a href="/#contacto" style={{ color: 'var(--green)', fontWeight: 800 }}>Sucursal — Nuevo Celaya</a></li>
             <li><a href="tel:4616146217">461 614 6217</a></li>
             <li><a href="https://wa.me/524424659302" target="_blank" rel="noopener noreferrer">+52 442 465 9302</a></li>
-            <li><a href="tel:4616155620" style={{ color: 'var(--red)', fontWeight: 800 }}>Emergencias 24/7</a></li>
+            <li><a href="tel:4616155620" style={{ color: 'var(--red)', fontWeight: 800 }}>Emergencias hasta las 12am</a></li>
           </ul>
         </div>
       </div>

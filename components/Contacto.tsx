@@ -47,7 +47,7 @@ export default function Contacto() {
               <h4>Horarios</h4>
               <div className="sr"><span className="day">Lunes – Viernes</span><span className="hrs">9:00 am – 7:00 pm</span></div>
               <div className="sr"><span className="day">Sábado</span><span className="hrs">9:00 am – 6:00 pm</span></div>
-              <div className="sr"><span className="day">Emergencias</span><span className="b24">24/7</span></div>
+              <div className="sr"><span className="day">Emergencias</span><span className="b24">hasta 12am</span></div>
             </div>
             <a
               href="https://wa.me/524424659302?text=Hola%2C%20quiero%20agendar%20en%20Mutualismo"
@@ -94,7 +94,7 @@ export default function Contacto() {
               <h4>Horarios</h4>
               <div className="sr"><span className="day">Lunes – Viernes</span><span className="hrs">9:00 am – 7:00 pm</span></div>
               <div className="sr"><span className="day">Sábado</span><span className="hrs">9:00 am – 7:30 pm</span></div>
-              <div className="sr"><span className="day">Emergencias</span><span className="b24">24/7</span></div>
+              <div className="sr"><span className="day">Emergencias</span><span className="b24">hasta 12am</span></div>
               <div className="notice-box">
                 <span>Cierra a comer de <strong>3:00–5:00 pm</strong> solo lunes a viernes</span>
               </div>

@@ -28,7 +28,7 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   title: "Veterinaria Mutualismo | Clínica Veterinaria en Celaya, Guanajuato",
   description:
-    "Veterinaria Mutualismo en Celaya, Gto. Más de 20 años de experiencia. Consultas, vacunación, cirugías, estética, hospitalización y emergencias 24/7. 2 sucursales.",
+    "Veterinaria Mutualismo en Celaya, Gto. Más de 20 años de experiencia. Consultas, vacunación, cirugías, estética, hospitalización y emergencias hasta las 12am. 2 sucursales.",
   keywords: [
     "veterinaria Celaya",
     "veterinaria Mutualismo",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Veterinaria Mutualismo | Celaya, Guanajuato",
     description:
-      "Más de 20 años cuidando mascotas en Celaya. Consultas, cirugías, estética y emergencias 24/7. 2 sucursales.",
+      "Más de 20 años cuidando mascotas en Celaya. Consultas, cirugías, estética y emergencias hasta las 12am. 2 sucursales.",
     url: "https://www.veterinariamutualismo.com",
     siteName: "Veterinaria Mutualismo",
     locale: "es_MX",

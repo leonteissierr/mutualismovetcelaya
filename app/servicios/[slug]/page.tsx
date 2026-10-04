@@ -32,11 +32,11 @@ const serviceData: Record<string, {
     ],
   },
   urgencias: {
-    title: 'Urgencias 24/7',
+    title: 'Urgencias hasta las 12am',
     icon: '',
-    desc: 'Las emergencias no avisan. Por eso estamos disponibles toda la noche, todos los días del año. Llámanos o escríbenos: siempre habrá alguien listo para ayudarte.',
+    desc: 'Las emergencias no avisan. Por eso estamos disponibles hasta la medianoche, todos los días del año. Llámanos o escríbenos: siempre habrá alguien listo para ayudarte.',
     items: [
-      { icon: '', title: 'Atención a Cualquier Hora', desc: 'Equipo disponible las 24 horas, todos los días del año. Contáctanos por teléfono o WhatsApp y te orientamos de inmediato sobre los pasos a seguir.' },
+      { icon: '', title: 'Atención hasta las 12am', desc: 'Equipo disponible hasta las 12 de la noche, todos los días del año. Contáctanos por teléfono o WhatsApp y te orientamos de inmediato sobre los pasos a seguir.' },
       { icon: '', title: 'Hospitalización y Seguimiento', desc: 'Área de hospitalización con revisiones periódicas, medicación controlada y atención cercana para que tu mascota regrese a casa en las mejores condiciones.' },
     ],
   },

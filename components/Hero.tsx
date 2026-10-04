@@ -93,7 +93,7 @@ export default function Hero() {
         <div className="hstat-div" />
         <div className="hstat"><span className="hstat-num">2</span><span className="hstat-lbl">sucursales en Celaya</span></div>
         <div className="hstat-div" />
-        <div className="hstat"><span className="hstat-num">24/7</span><span className="hstat-lbl">atención de emergencias</span></div>
+        <div className="hstat"><span className="hstat-num">12am</span><span className="hstat-lbl">atención de emergencias</span></div>
         <div className="hstat-div" />
         <div className="hstat"><span className="hstat-num">+5,000</span><span className="hstat-lbl">mascotas atendidas</span></div>
       </div>

@@ -9,7 +9,7 @@ const faqs = [
   { cat: 'Vacunas', q: '¿A qué edad debe vacunarse mi mascota por primera vez?', a: 'Recomendamos comenzar el esquema de vacunación a partir del mes y medio de edad.' },
   { cat: 'Salud', q: '¿Con qué frecuencia debo llevar a mi mascota a consulta?', a: 'Recomendamos una visita cada 2 meses para dar seguimiento adecuado a la salud de tu mascota.' },
   { cat: 'Salud', q: '¿Realizan desparasitaciones?', a: 'Sí, realizamos desparasitaciones internas y externas con los productos más efectivos y seguros.' },
-  { cat: 'Emergencias', q: '¿Cómo funciona el servicio de emergencias 24/7?', a: 'En caso de emergencia, contáctanos por teléfono o WhatsApp y te atenderemos de inmediato, sin importar el día u hora.' },
+  { cat: 'Emergencias', q: '¿Cómo funciona el servicio de emergencias?', a: 'En caso de emergencia, contáctanos por teléfono o WhatsApp y te atenderemos de inmediato. Estamos disponibles hasta las 12am todos los días.' },
   { cat: 'Clínica', q: '¿Cuántas sucursales tienen?', a: 'Contamos con 2 sucursales en Celaya: Mutualismo 605 (Matriz) y 12 de Octubre S/N, Nuevo Celaya.' },
   { cat: 'Clínica', q: '¿Aceptan pagos con tarjeta?', a: 'Sí, aceptamos pagos en efectivo y con tarjeta para tu comodidad.' },
   { cat: 'Clínica', q: '¿Puedo quedarme con mi mascota durante la consulta?', a: 'Sí, puedes acompañar a tu mascota. Tu presencia la ayuda a sentirse más tranquila.' },
