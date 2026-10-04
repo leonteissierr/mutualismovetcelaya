@@ -2,11 +2,11 @@ export default function Emergencias() {
   return (
     <section id="emergencias">
       <div className="emer-inner">
-        <div className="emer-badge">Emergencias Veterinarias 24/7</div>
+        <div className="emer-badge">Emergencias Veterinarias hasta las 12am</div>
         <h2>¿Tu mascota necesita atención urgente?</h2>
         <p className="sub">
-          No importa si es de día, de noche, fin de semana o día festivo. Estamos disponibles las{' '}
-          <strong style={{ color: '#fff' }}>24 horas los 7 días</strong> para atender cualquier
+          No importa si es de día o de noche, fin de semana o día festivo. Estamos disponibles{' '}
+          <strong style={{ color: '#fff' }}>hasta las 12 de la noche los 7 días</strong> para atender cualquier
           emergencia.
         </p>
         <div className="emer-btns">

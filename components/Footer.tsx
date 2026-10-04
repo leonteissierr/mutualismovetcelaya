@@ -26,7 +26,7 @@ export default function Footer() {
             <li><a href="/servicios/cirugias">Cirugías</a></li>
             <li><a href="/servicios/urgencias">Hospitalización</a></li>
             <li><a href="/#pension">Pensión / Hotel</a></li>
-            <li><a href="/servicios/urgencias" style={{ color: 'var(--red)', fontWeight: 800 }}>Emergencias 24/7</a></li>
+            <li><a href="/servicios/urgencias" style={{ color: 'var(--red)', fontWeight: 800 }}>Emergencias hasta las 12am</a></li>
             <li><a href="/#productos">Alimentos y Productos</a></li>
           </ul>
         </div>

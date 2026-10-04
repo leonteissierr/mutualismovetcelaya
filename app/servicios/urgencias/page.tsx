@@ -6,14 +6,14 @@ import Footer from '@/components/Footer';
 import ScrollEffects from '@/components/ScrollEffects';
 
 export const metadata: Metadata = {
-  title: 'Urgencias 24/7 | Veterinaria Mutualismo — Celaya',
-  description: 'Atención veterinaria de emergencia disponible las 24 horas del día en Celaya, Guanajuato.',
+  title: 'Urgencias hasta las 12am | Veterinaria Mutualismo — Celaya',
+  description: 'Atención veterinaria de emergencia disponible hasta las 12 de la noche en Celaya, Guanajuato.',
 };
 
 const sections = [
   {
-    title: 'Atención a Cualquier Hora',
-    desc: 'En una emergencia, cada minuto cuenta. Nuestro equipo está disponible las 24 horas del día, los 7 días de la semana, incluyendo fines de semana y días festivos. Contáctanos por teléfono o WhatsApp y te orientamos de inmediato sobre los pasos a seguir.',
+    title: 'Atención hasta las 12am',
+    desc: 'En una emergencia, cada minuto cuenta. Nuestro equipo está disponible hasta las 12 de la noche, todos los días de la semana, incluyendo fines de semana y días festivos. Contáctanos por teléfono o WhatsApp y te orientamos de inmediato sobre los pasos a seguir.',
     illustration: '/servicios/urgencias24hrs.png',
     photo: '/pacientes/paciente-3.jpeg',
     photoAlt: 'Mascota siendo atendida en urgencias Veterinaria Mutualismo',
@@ -40,11 +40,11 @@ export default function UrgenciasPage() {
           <div className="svc-hero-v2-inner">
             <div className="svc-hero-v2-content">
               <span className="svc-breadcrumb">
-                <Link href="/#servicios">Servicios</Link> / <span>Urgencias 24/7</span>
+                <Link href="/#servicios">Servicios</Link> / <span>Urgencias hasta las 12am</span>
               </span>
-              <h1>Urgencias 24/7</h1>
+              <h1>Urgencias hasta las 12am</h1>
               <p>
-                Las emergencias no avisan. Por eso estamos disponibles toda la noche,
+                Las emergencias no avisan. Por eso estamos disponibles hasta la medianoche,
                 todos los días del año. Llámanos o escríbenos: siempre habrá alguien
                 listo para ayudarte.
               </p>

@@ -54,7 +54,7 @@ export default function Nosotros() {
               <li>Veterinarios certificados y en constante capacitación</li>
               <li>Equipamiento moderno para diagnóstico y cirugía</li>
               <li>Trato individualizado y seguimiento de cada paciente</li>
-              <li>Atención de emergencias disponible las 24 horas</li>
+              <li>Atención de emergencias disponible hasta las 12am</li>
               <li>Transparencia total en diagnósticos y costos</li>
             </ul>
             <a
